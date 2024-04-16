@@ -20,9 +20,17 @@ def Dialogue(sentence, interval, clear):
     else:
         pass
 
-def Choice(choice1, choice2):
+def Choice(choice1, choice2, response1, response2):
     print("1. " + choice1)
     print("2. " + choice2)
+
+    ans = input("> ")
+    if ans == 1:
+        Dialogue(response1, 2, 0)
+    elif ans == 2:
+        Dialogue(response2, 2, 0)
+    else:
+         Dialogue(response2, 2, 0)
 
 def Location(place):
     places = {1: "Coffee Shop",
@@ -45,14 +53,6 @@ def Location(place):
         Clear()
         print(place)
 
-    ans = input("> ")
-    if ans == 1:
-        return 1
-    elif ans == 2:
-        return 2
-    else:
-        return 2
-
 def Act1():
     Clear()
     print("░▒▓ ACT I ▓▒░")
@@ -72,5 +72,6 @@ def Act1():
 
     Dialogue("A man suited in black sits next to you, his face is covered by a strange mask...", 2, 1)
     Dialogue("He looks ouside the window and then turns towards you \nShady Figure: Good weather innit?", 2, 0)
-    Location("")
+    Choice("I like the rain...", " I'm not fond of the rain...", "Shady Figure: Something just feels right about it... right?", "Shady Figure: Now now... Don't be like that, enjoy the rain...")
+
 Act1()
