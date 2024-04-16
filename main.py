@@ -74,4 +74,5 @@ def Act1():
     Dialogue("He looks ouside the window and then turns towards you \nShady Figure: Good weather innit?", 2, 0)
     Choice("I like the rain...", " I'm not fond of the rain...", "Shady Figure: Something just feels right about it... right?", "Shady Figure: Now now... Don't be like that, enjoy the rain...")
 
+    #funfact: it took me almost 2 hours to set up ssh connection github :)
 Act1()
